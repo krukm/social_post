@@ -1,6 +1,6 @@
 'use strict';
 
-const posts = {
+const post = {
     bindings: {
         post: '<'
     },
@@ -12,4 +12,4 @@ const posts = {
 
 }
 
-angular.module('app').component('posts', posts);
+angular.module('app').component('post', post);

@@ -5,9 +5,9 @@ const postForm = {
         onSubmit: '&'
     },
     template: `
-    <form>
-        <input type="text">
-        <input type="textarea">
+    <form ng-submit="$ctrl.onSubmit({ newPost: $ctrl.postContent });">
+        <input type="text" ng-model="$ctrl.postContent.title">
+        <input type="textarea" ng-model="$ctrl.postContent.text">
         <button>Add Post</button>
     </form>
     `
