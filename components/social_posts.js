@@ -4,7 +4,7 @@ const socialPosts = {
     template: `
         <h1 class="h1">My Thoughts</h1>
         <section class="section__container">
-            <button class="btn__add-post" type="button" ng-click="$ctrl.toggleDisplay();">New Thought</button>
+            <button class="btn__add-post" type="button" ng-show="$ctrl.toggleElements" ng-click="$ctrl.toggleDisplay();">New Thought</button>
             <section class="section__form">
                 <post-form ng-hide="$ctrl.toggleElements" on-submit="$ctrl.onSubmit(newPost);"></post-form>
             </section>
