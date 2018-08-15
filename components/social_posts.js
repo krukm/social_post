@@ -3,9 +3,14 @@
 const socialPosts = {
     template: `
         <h1 class="h1">My Thoughts</h1>
-        <post-form on-submit="$ctrl.onSubmit(newPost);"></post-form>
-        <section class="section__post">
-        <post ng-repeat="post in $ctrl.postList" post="post"></post>
+        <section class="section__container">
+            <button class="btn__add-post" type="button">New Thought</button>
+            <section class="section__form">
+                <post-form on-submit="$ctrl.onSubmit(newPost);"></post-form>
+            </section>
+            <section class="section__posts">
+                <post ng-repeat="post in $ctrl.postList" post="post"></post>
+            </section>
         </section>
     `,
     controller: function() {
